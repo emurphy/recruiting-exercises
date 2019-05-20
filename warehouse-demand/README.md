@@ -5,23 +5,23 @@
 When a seller sends inventory to Deliverr, we need to decide what warehouses will receive the inventory. Ideally we 
 place the product near areas where customers will buy it. There are three inputs:
   - A mapping of zip code to historical order quantity
-    ```json
+    ```
     { "01000":  190, "01001":  7, ..., "99999":  22}
     ``` 
   - Warehouse zip codes
-    ```json
+    ```
     ["01100", "34028", ..., "94102"]
     ```
   - A function to calculate the distance between zip codes
     ```typescript
-    zipcodes.distance(zip1: string, zip2: string): number
+     function distance(zip1: string, zip2: string): number
     ```
   
 Your function needs to calculate and output the percentage of demand to be met by each warehouse.
 
   - Example output
-    ```json
-    { "01100": 33.333, "34028": 52.01, ..., "94102": 22.987 }
+    ```
+    { "01100": 33.333, "34028": 22.01, ..., "94102": 12.987 }
     ```
 
 You can use any language of your choice to write the solution (internally we use Typescript/Javascript, Python, and some 
