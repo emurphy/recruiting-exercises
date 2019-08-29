@@ -4,9 +4,9 @@
 
 When a seller sends inventory to Deliverr, we need to decide what warehouses will receive the inventory. Ideally we 
 place the product near areas where customers will buy it. There are three inputs:
-  - A mapping of zip code to historical order quantity
+  - For each product (identified by stock-keeping unit, aka SKU), a mapping of zip code to historical order quantity
     ```
-    { "01000":  190, "01001":  7, ..., "99999":  22}
+    { "D12345": { "01000":  190, "01001":  7, ..., "99999":  22} }
     ``` 
   - Warehouse zip codes
     ```
@@ -21,7 +21,7 @@ Your function needs to calculate and output the percentage of demand to be met b
 
   - Example output
     ```
-    { "01100": 33.333, "34028": 22.01, ..., "94102": 12.987 }
+    { "D12345": { "01100": 33.333, "34028": 22.01, ..., "94102": 12.987 } }
     ```
 
 You can use any language of your choice to write the solution (internally we use Typescript/Javascript, Python, and some 
