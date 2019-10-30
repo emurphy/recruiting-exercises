@@ -21,8 +21,8 @@ Your function needs to calculate and output the percentage of demand to be met b
 
   - Example output
     ```
-    { "D12345": { "01100": 33.333, "34028": 22.01, ..., "94102": 12.987 } }
+    { "D12345": { "01100": 0.3333, "34028": 0.2201, ..., "94102": 0.987 } }
     ```
 
-You can use any language of your choice to write the solution (internally we use Typescript/Javascript, Python, and some 
+Use any language of your choice to write the solution (internally we use Typescript/Javascript, Python, and some 
 Java). 
