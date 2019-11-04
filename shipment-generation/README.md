@@ -25,7 +25,7 @@ Write code to generate the inbound shipments. Input includes:
     ```
   
 Your function needs to generate and output ten shipments. Each shipment will be sent to one of the
-warehouses and will consist of the quantity of products to be sent to each warehouse.
+warehouses and will consist of the quantity of products to be sent.
 
   - Example output
     ```
