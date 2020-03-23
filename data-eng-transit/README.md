@@ -1,13 +1,11 @@
-# Carrier transit times
+## Carrier transit times
 
-We need to know whether ground shipping methods can be sent from one zip code to another within 1 or 2 days. 
-With input from [tracking-data.csv](tracking-data.csv), outline a process and code (as far as possible) a function that 
-will decide whether FedEx Ground can reliably ship from zip3 752 and reach the destination 
-zip3 (in the `zip_group_to` column). The target rate for on-time delivery (OTD) is 95%.
+When shipping a package, we need to know whether a ground shipping method can reliably deliver from one zip code to another within 1 or 2 days. 
+The file [tracking-data.csv](tracking-data.csv) includes a sample of FedEx package tracking data where all packages originate from zip3 752. Our task is to code (as far as possible) a function that will predict whether FedEx Ground can reliably ship from zip3 752 and reach each destination zip3 (in the `zip_group_to` column) within delivery days 1, 2 or 3 respectively. The target rate for on-time delivery (OTD) is 95%.
 
-## Sample transit corridor
+### Sample transit corridor
 
-For example the following table reproduces the tracking data for destination zip3 358.
+For example the following table extracts the tracking data for destination zip3 358.
 
 | trackingcode | shippingmethod | fromzip | tozip | acceptedat | deliveredat | zip_group_to | transit_time | day_of_week |
 | ------------ | -------------- | ------- | ----- | ---------- | ----------- | ------------ | ------------ | ----------- |
@@ -18,9 +16,9 @@ For example the following table reproduces the tracking data for destination zip
 | 390101490255 | FEDEX.GROUND | 75211 | 35810 | 2020-02-03T16:10:00-06:00 | 2020-02-05T08:35:21-06:00 | 358 | 2 | Monday |
 | 390101489398 | FEDEX.GROUND | 75211 | 35810 | 2020-02-03T16:10:00-06:00 | 2020-02-05T08:35:21-06:00 | 358 | 2 | Monday |
 
-Can we send a package on FedEx Ground from 752 to 358 and expect it to arrive within 2 days?
+When we send a package on FedEx Ground from 752 to 358, can we expect it to arrive within 1, 2 or 3 days? The `transit_time` column lists the number of days that each package actually spent in transit.
 
-## Sample output
+### Sample output
 
 There is sample output in [transit-time-decisions.csv](transit-time-decisions.csv), though it may or may not be helpful.
 It goes farther than needed for this simplified problem, in a few respects:
