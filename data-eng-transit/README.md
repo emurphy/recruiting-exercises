@@ -17,15 +17,3 @@ For example the following table extracts the tracking data for destination zip3 
 | 390101489398 | FEDEX.GROUND | 75211 | 35810 | 2020-02-03T16:10:00-06:00 | 2020-02-05T08:35:21-06:00 | 358 | 2 | Monday |
 
 When we send a package on FedEx Ground from 752 to 358, can we expect it to arrive within 1, 2 or 3 days? The `transit_time` column lists the number of days that each package actually spent in transit.
-
-### Sample output
-
-There is sample output in [transit-time-decisions.csv](transit-time-decisions.csv), though it may or may not be helpful.
-It goes farther than needed for this simplified problem, in a few respects:
-
-  - The decision is made on two levels: By day of week vs. aggregate
-  - Includes the confidence level that led to the decision
-  - The OTD target rate has been varied according to unspecified logic
-  
-The output file is included in case it is helpful for clarifying the requirements, but it is expected that your own 
-output will be simpler.
