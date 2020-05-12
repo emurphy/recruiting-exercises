@@ -10,7 +10,7 @@ place the product near areas where customers will buy it. There are three inputs
     ``` 
   - Warehouse zip codes
     ```
-    ["01100", "34028", ..., "94102"]
+    ["01100", "34028", "60491", "94102"]
     ```
   - A function to calculate the distance between zip codes
     ```typescript
@@ -21,7 +21,7 @@ Your function needs to calculate and output the percentage of demand to be met b
 
   - Example output
     ```
-    { "D12345": { "01100": 0.3333, "34028": 0.2201, ..., "94102": 0.987 } }
+    { "D12345": { "01100": 0.3333, "34028": 0.2201, "60491": 0.18, "94102": 0.27 } }
     ```
 
 Use any language of your choice to write the solution (internally we use Typescript/Javascript, Python, and some 

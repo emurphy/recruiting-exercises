@@ -5,8 +5,8 @@
 When a seller sends inventory to Deliverr, we need to decide how much inventory each warehouse will receive. Ideally we 
 place the product near areas where customers will buy it. 
 
-Write code to generate the inbound shipments. Input includes:
-  - Ten warehouses and their zip codes:
+When generating inbound shipments, input includes:
+  - Warehouses and their zip codes:
     ```
     { [{ "warehouseId": "WH1", "zip": "01100" }, { "warehouseId": "WH2", "zip":  "34028" }, ...,
        { "warehouseId": "WH10", "zip": "94102" }] }
@@ -24,8 +24,8 @@ Write code to generate the inbound shipments. Input includes:
      function distance(zip1: string, zip2: string): number
     ```
   
-Your function needs to generate and output ten shipments. Each shipment will be sent to one of the
-warehouses and will consist of the quantity of products to be sent.
+Your function needs to generate and output four shipments. Each shipment will be sent to one warehouse and will 
+consist of the quantity of products to be sent.
 
   - Example output
     ```
